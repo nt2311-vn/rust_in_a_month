@@ -26,6 +26,12 @@ Session.vim
 .settings/
 .vs/
 .dir-locals.el
+*.o
+*.exe
+*.d
+*.bin
+*.lock
+*.pdb
 
 ## Tool
 .valgrindrc
