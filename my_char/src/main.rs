@@ -10,4 +10,9 @@ fn main() {
 
     let str2 = "안녕!";
     println!("str2 is {} bytes", str2.len());
+
+    println!("{:?}", "a".as_bytes());
+    println!("{:?}", "ß".as_bytes());
+    println!("{:?}", "国".as_bytes());
+    println!("{:?}", "λ".as_bytes());
 }
