@@ -1,3 +1,6 @@
+fn give_number() -> i32 {
+    8
+}
 fn main() {
-    println!("Hello, world number {} and {}!", 8, 9);
+    println!("Hello, world number {} !", give_number());
 }
