@@ -1,3 +1,4 @@
 fn main() {
-    println!("Hello, world!");
+    let mut my_number = 8;
+    my_number = 10;
 }
