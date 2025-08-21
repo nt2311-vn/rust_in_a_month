@@ -107,3 +107,5 @@ flake.lock
 
 # Before adding new lines, see the comment at the top.
 *.json
+
+/target
