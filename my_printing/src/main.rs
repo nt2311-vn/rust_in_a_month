@@ -27,4 +27,11 @@ fn main() {
     println!("The url is www.{}.com", naver_base_url);
     println!("The url is www.{}.com", google_base_url);
     println!("The url is www.{}.com", microsoft_base_url);
+
+    let combined_number = {
+        let second_number = 8;
+        second_number + 9
+    };
+
+    println!("My number is: {:?}", combined_number);
 }
