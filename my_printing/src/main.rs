@@ -14,4 +14,9 @@ fn main() {
 
     let my_number = 8;
     println!("Hello, number {my_number}");
+
+    let color1 = "red";
+    let color2 = "green";
+    let color3 = "blue";
+    println!("I like {color1} and {color2} and {color3}");
 }
