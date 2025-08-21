@@ -19,4 +19,12 @@ fn main() {
     let color2 = "green";
     let color3 = "blue";
     println!("I like {color1} and {color2} and {color3}");
+
+    let naver_base_url = "naver";
+    let google_base_url = "google";
+    let microsoft_base_url = "microsoft";
+
+    println!("The url is www.{}.com", naver_base_url);
+    println!("The url is www.{}.com", google_base_url);
+    println!("The url is www.{}.com", microsoft_base_url);
 }
