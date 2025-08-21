@@ -34,4 +34,7 @@ fn main() {
     };
 
     println!("My number is: {:?}", combined_number);
+
+    let doesnt_print = ();
+    println!("This will not print: {:?}", doesnt_print);
 }
