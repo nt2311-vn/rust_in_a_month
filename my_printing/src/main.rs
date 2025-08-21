@@ -11,4 +11,7 @@ fn main() {
     let some_number = 10;
     let some_other_number = 2;
     multiply(some_number, some_other_number);
+
+    let my_number = 8;
+    println!("Hello, number {my_number}");
 }
