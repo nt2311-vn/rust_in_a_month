@@ -5,4 +5,7 @@ fn main() {
     println!("{:?}", my_array);
 
     println!("{:?}", b"Hello there");
+
+    let my_numbers = [0, 10, -20];
+    println!("{}", my_numbers[1]);
 }
