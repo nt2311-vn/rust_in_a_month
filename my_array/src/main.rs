@@ -1,3 +1,6 @@
 fn main() {
-    println!("Hello, world!");
+    let array1 = ["One", "Two"];
+    let array2 = ["One", "Two", "Five"];
+    let my_array = ["a"; 5];
+    println!("{:?}", my_array);
 }
