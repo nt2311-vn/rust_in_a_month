@@ -37,4 +37,6 @@ fn main() {
 
     let doesnt_print = ();
     println!("This will not print: {:?}", doesnt_print);
+
+    print!("\t Start with a tab\nand move to a new line");
 }
