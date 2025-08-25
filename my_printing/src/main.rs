@@ -38,5 +38,65 @@ fn main() {
     let doesnt_print = ();
     println!("This will not print: {:?}", doesnt_print);
 
-    print!("\t Start with a tab\nand move to a new line");
+    print!("\t Start with a tab\nand move to a new line\n");
+    println!(
+        "Inside quotes
+you can write over
+many lines
+and it will print just fine."
+    );
+    println!("Here are two escape characters: \\n and \\t");
+    println!(
+        r#"He said, "You can find the file at
+c:\\files\\my_documents\\file.txt.\" Then I found the file."#
+    );
+
+    let my_string = "' Ice to see you,' he said.";
+    let quote_string = r#""Ice to see you," he said."#;
+    let hashtag_string = r##"The hashtag "#IceToSeeYou" had become
+very popular."##;
+    let many_hashtag = r####""You don't have to type "###" to
+use a hashtag. You can just use #."####;
+
+    println!(
+        "{}\n{}\n{}\n{}\n",
+        my_string, quote_string, hashtag_string, many_hashtag
+    );
+
+    println!("{:?}", b"This will look like numbers");
+    println!("{:?}", br##"I like to write "#"."##);
+
+    println!("{:X}", '행' as u32);
+    println!("{:X}", 'H' as u32);
+    println!("{:X}", '居' as u32);
+    println!("{:X}", 'い' as u32);
+    println!("\u{D589}, \u{48}, \u{5C45}, \u{3044}");
+
+    let number = 9;
+    let number_ref = &number;
+    println!("{:p}", number_ref);
+
+    let other_number = 555;
+    println!(
+        "Binary: {:b}, Hexadecimal: {:x}, octal: {:o}",
+        other_number, other_number, other_number
+    );
+
+    let father_name = "Vlad";
+    let son_name = "Adrian Fahrenheit";
+    let family_name = "Țepeș";
+    println!(
+        "This is {1} {2}, son of {0} {2}",
+        father_name, son_name, family_name
+    );
+
+    println!("{city1}, is in {country} and {city2} is also in {country}, but {city3} is not in {country}.",
+        city1 = "Seoul",
+        city2 = "Busan",
+        city3 = "Tokyo",
+        country = "Korea"
+    );
+
+    let letter = "a";
+    println!("{:ㅎ^11}", letter);
 }
