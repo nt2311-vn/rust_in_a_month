@@ -24,5 +24,18 @@ start at two: {:?}
 end at five: {:?}
 everything: {:?}",
         three_of_five, start_at_two, end_at_five, everything
-    )
+    );
+
+    let mut num_vec = Vec::new();
+    println!("{}", num_vec.capacity());
+
+    num_vec.push('a');
+    println!("{}", num_vec.capacity());
+    num_vec.push('a');
+    num_vec.push('a');
+    num_vec.push('a');
+
+    println!("{}", num_vec.capacity());
+    num_vec.push('a');
+    println!("{}", num_vec.capacity());
 }
