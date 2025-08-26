@@ -38,4 +38,15 @@ everything: {:?}",
     println!("{}", num_vec.capacity());
     num_vec.push('a');
     println!("{}", num_vec.capacity());
+
+    let mut other_num_vec = Vec::with_capacity(8);
+    other_num_vec.push('a');
+    println!("{}", other_num_vec.capacity());
+    other_num_vec.push('a');
+    println!("{}", other_num_vec.capacity());
+    other_num_vec.push('a');
+    println!("{}", other_num_vec.capacity());
+    other_num_vec.push('a');
+    other_num_vec.push('a');
+    println!("{}", other_num_vec.capacity());
 }
