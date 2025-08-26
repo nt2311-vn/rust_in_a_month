@@ -49,4 +49,9 @@ everything: {:?}",
     other_num_vec.push('a');
     other_num_vec.push('a');
     println!("{}", other_num_vec.capacity());
+
+    let into_vec: Vec<u8> = [1, 2, 3].into();
+    let into_vec2: Vec<_> = [9, 0, 10].into();
+
+    println!("Into vec: {:?}, into_vec2: {:?}", into_vec, into_vec2);
 }
