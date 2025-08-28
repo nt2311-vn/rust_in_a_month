@@ -1,3 +1,5 @@
+use std::any::Any;
+
 fn match_colors(rgb: (i32, i32, i32)) {
     match rgb {
         (r, _, _) if r < 10 => println!("Not much red"),
@@ -64,9 +66,9 @@ fn main() {
     match_colors(third);
 
     let other_number = 10;
-
-    let some_variable = match other_number {
-        10 => 8,
-        _ => "Not ten",
-    };
+    if other_number == 10 {
+        let _some_variable = 8;
+    } else {
+        let _some_variable = "Something else";
+    }
 }
