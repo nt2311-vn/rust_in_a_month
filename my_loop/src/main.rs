@@ -30,4 +30,11 @@ fn main() {
             }
         }
     }
+
+    let mut another_counter = 0;
+
+    while another_counter < 5 {
+        another_counter += 1;
+        println!("The another counter is now: {another_counter}");
+    }
 }
