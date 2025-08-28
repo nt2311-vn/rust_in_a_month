@@ -16,4 +16,12 @@ fn main() {
         2 => println!("it's two"),
         _ => println!("it's some other number"),
     }
+
+    let second_number = match my_number {
+        0 => 0,
+        5 => 10,
+        _ => 2,
+    };
+
+    println!("Second number {second_number}");
 }
