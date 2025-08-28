@@ -37,4 +37,12 @@ fn main() {
         another_counter += 1;
         println!("The another counter is now: {another_counter}");
     }
+
+    for number in 0..3 {
+        println!("The number is: {}", number);
+    }
+
+    for number in 0..=3 {
+        println!("The next number is: {}", number);
+    }
 }
