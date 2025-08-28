@@ -7,4 +7,13 @@ fn main() {
     } else {
         println!("It's a different number")
     }
+
+    let other_number: u8 = 5;
+
+    match other_number {
+        0 => println!("it's zero"),
+        1 => println!("it's one"),
+        2 => println!("it's two"),
+        _ => println!("it's some other number"),
+    }
 }
