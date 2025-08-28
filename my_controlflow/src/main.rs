@@ -1,11 +1,18 @@
-use std::any::Any;
-
 fn match_colors(rgb: (i32, i32, i32)) {
     match rgb {
         (r, _, _) if r < 10 => println!("Not much red"),
         (_, g, _) if g < 10 => println!("Not much green"),
         (_, _, b) if b < 10 => println!("Not much blue"),
         _ => println!("Each color has at least 10"),
+    }
+}
+
+fn match_number(input: i32) {
+    match input {
+        number @ 4 => println!("{number} is unlucky in China (sounds close to 死)!"),
+        number @ 13 => println!("{number} is lucky in Italy! In boca al lupo!"),
+        number @ 14..=19 => println!("Some other number that ends with -teen: {number}"),
+        _ => println!("Some other number, I guess"),
     }
 }
 
@@ -71,4 +78,9 @@ fn main() {
     } else {
         let _some_variable = "Something else";
     }
+
+    match_number(50);
+    match_number(13);
+    match_number(16);
+    match_number(4);
 }
