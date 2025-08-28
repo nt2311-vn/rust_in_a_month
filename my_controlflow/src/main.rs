@@ -62,4 +62,11 @@ fn main() {
     match_colors(first);
     match_colors(second);
     match_colors(third);
+
+    let other_number = 10;
+
+    let some_variable = match other_number {
+        10 => 8,
+        _ => "Not ten",
+    };
 }
