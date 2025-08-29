@@ -49,4 +49,15 @@ fn main() {
     for _ in 0..3 {
         println!("Printing the same thing three times");
     }
+
+    let mut next_counter = 5;
+
+    let my_number = loop {
+        next_counter += 1;
+        if next_counter % 53 == 3 {
+            break next_counter;
+        }
+    };
+
+    print!("Next counter: {my_number}");
 }
