@@ -79,6 +79,15 @@ enum Number {
     I32(i32),
 }
 
+fn get_number(input: i32) -> Number {
+    let number = match input.is_positive() {
+        true => Number::U32(input as u32),
+        false => Number::I32(input),
+    };
+
+    number
+}
+
 fn main() {
     let kalmykia = Country {
         population: 500_000,
@@ -114,6 +123,14 @@ fn main() {
             size if size <= 80 => println!("Not the biggest star!"),
             size if size >= 80 && size <= 200 => println!("This is a good-sized star."),
             other_size => println!("That star is pretty big! It's {other_size}"),
+        }
+    }
+
+    let my_vec = vec![get_number(-800), get_number(8)];
+    for item in my_vec {
+        match item {
+            Number::U32(number) => println!("A u32 with the value {number}"),
+            Number::I32(number) => println!("An i32 with the value {number}"),
         }
     }
 }
