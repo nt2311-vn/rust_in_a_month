@@ -56,6 +56,14 @@ fn match_mood(mood: &Mood) -> i32 {
     happiness_level
 }
 
+#[derive(Debug)]
+enum Season {
+    Spring,
+    Summer,
+    Autumn,
+    Winter,
+}
+
 fn main() {
     let kalmykia = Country {
         population: 500_000,
@@ -73,4 +81,12 @@ fn main() {
     let my_mood = Mood::Happy;
     let happiness_level = match_mood(&my_mood);
     println!("Out of 1 to 10, my happiness is {happiness_level}");
+
+    use Season::*;
+
+    let four_season = vec![Spring, Summer, Autumn, Winter];
+
+    for season in four_season {
+        println!("{}", season as u32);
+    }
 }
