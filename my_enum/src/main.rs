@@ -64,6 +64,15 @@ enum Season {
     Winter,
 }
 
+#[derive(Debug)]
+enum Star {
+    BrownDwarf = 10,
+    RedDwarf = 50,
+    YellowStar = 100,
+    RedGiant = 1000,
+    DeadStar,
+}
+
 fn main() {
     let kalmykia = Country {
         population: 500_000,
@@ -88,5 +97,17 @@ fn main() {
 
     for season in four_season {
         println!("{}", season as u32);
+    }
+
+    use Star::*;
+
+    let starvec = vec![BrownDwarf, RedDwarf, YellowStar, RedGiant, DeadStar];
+
+    for star in starvec {
+        match star as u32 {
+            size if size <= 80 => println!("Not the biggest star!"),
+            size if size >= 80 && size <= 200 => println!("This is a good-sized star."),
+            other_size => println!("That star is pretty big! It's {other_size}"),
+        }
     }
 }
