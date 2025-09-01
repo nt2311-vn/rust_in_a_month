@@ -73,6 +73,12 @@ enum Star {
     DeadStar,
 }
 
+#[derive(Debug)]
+enum Number {
+    U32(u32),
+    I32(i32),
+}
+
 fn main() {
     let kalmykia = Country {
         population: 500_000,
