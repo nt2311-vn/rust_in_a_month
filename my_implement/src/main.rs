@@ -10,6 +10,13 @@ struct Animal {
     animal_type: AnimalType,
 }
 
+#[derive(Debug)]
+enum Mood {
+    Good,
+    Bad,
+    Sleepy,
+}
+
 impl Animal {
     fn new_cat() -> Self {
         Self {
@@ -36,6 +43,16 @@ impl Animal {
     }
 }
 
+impl Mood {
+    fn check(&self) {
+        match self {
+            Mood::Good => println!("Feeling good!"),
+            Mood::Bad => println!("Eh, not feeling so good"),
+            Mood::Sleepy => println!("Need sleep NOW"),
+        }
+    }
+}
+
 fn main() {
     let mut new_animal = Animal::new_cat();
     new_animal.check_type();
@@ -43,4 +60,7 @@ fn main() {
     new_animal.check_type();
     new_animal.change_to_cat();
     new_animal.check_type();
+
+    let my_mood = Mood::Sleepy;
+    my_mood.check();
 }
