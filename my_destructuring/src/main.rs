@@ -6,6 +6,18 @@ struct Person {
     happiness: bool,
 }
 
+fn check_if_happy(person: &Person) {
+    println!("Is {} happy? {}", person.name, person.happiness);
+}
+
+fn check_if_happy_destructed(
+    Person {
+        name, happiness, ..
+    }: &Person,
+) {
+    println!("Is {name} happy? {happiness}");
+}
+
 #[derive(Debug)]
 struct City {
     name: String,
@@ -42,8 +54,8 @@ fn main() {
     };
 
     let Person {
-        name,
-        real_name,
+        ref name,
+        ref real_name,
         height,
         happiness,
     } = papa_doc;
@@ -51,4 +63,7 @@ fn main() {
 
     let tallin = City::new("Tallinn", "Reval", 426_538, 1219);
     tallin.print_names();
+
+    check_if_happy(&papa_doc);
+    check_if_happy_destructed(&papa_doc);
 }
