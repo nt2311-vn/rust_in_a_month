@@ -1,3 +1,9 @@
+fn return_item<T>(item: T) -> T {
+    println!("Here is your item.");
+    item
+}
+
 fn main() {
-    println!("Hello, world!");
+    let item = return_item(5);
+    println!("Item {item}");
 }
