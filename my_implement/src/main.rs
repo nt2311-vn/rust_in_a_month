@@ -25,6 +25,21 @@ impl Animal {
         }
     }
 
+    fn new_dog() -> Self {
+        Self {
+            age: 5,
+            animal_type: AnimalType::Dog,
+        }
+    }
+
+    fn aging(&mut self) {
+        self.age += 1;
+        match self.animal_type {
+            AnimalType::Dog => println!("My dog is aging. Now it's {self:#?}"),
+            AnimalType::Cat => println!("My cat is aging. Now it's {self:#?}"),
+        }
+    }
+
     fn check_type(&self) {
         match self.animal_type {
             AnimalType::Cat => println!("The animal is a cat."),
@@ -63,4 +78,7 @@ fn main() {
 
     let my_mood = Mood::Sleepy;
     my_mood.check();
+
+    let mut other_animal = Animal::new_dog();
+    other_animal.aging();
 }
