@@ -23,6 +23,10 @@ fn compare_and_display<T: Display, U: Display + PartialOrd>(statement: T, input1
     );
 }
 
+fn say_two<T: Display, U: Display>(statement_1: T, statement_2: U) {
+    println!("I have two things to say: {statement_1} and {statement_2}");
+}
+
 fn main() {
     let item = return_item(5);
     println!("Item {item}");
@@ -38,4 +42,10 @@ fn main() {
     print_item(charlie);
 
     compare_and_display("Listen up!", 9, 8);
+
+    say_two("Hello there!", String::from("I hate sand."));
+    say_two(
+        String::from("Where is Padme?"),
+        String::from("Is she all right?"),
+    );
 }
