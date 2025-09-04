@@ -1,3 +1,7 @@
+fn check_error() -> Result<(), ()> {
+    Ok(())
+}
+
 fn main() {
-    println!("Hello, world!");
+    let _ = check_error();
 }
