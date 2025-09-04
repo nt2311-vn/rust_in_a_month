@@ -24,8 +24,17 @@ fn main() {
     //     try_take_fifth(big).unwrap()
     // );
 
-    let mut option_vec = Vec::new();
-    option_vec.push(try_take_fifth(small));
-    option_vec.push(try_take_fifth(big));
-    handle_options(&option_vec);
+    // let mut option_vec = Vec::new();
+    // option_vec.push(try_take_fifth(small));
+    // option_vec.push(try_take_fifth(big));
+    // handle_options(&option_vec);
+
+    for vec in vec![small, big] {
+        let inside_number = try_take_fifth(vec);
+        if inside_number.is_some() {
+            println!("We got: {}", inside_number.unwrap());
+        } else {
+            println!("We got nothing.");
+        }
+    }
 }
