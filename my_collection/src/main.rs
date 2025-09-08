@@ -1,9 +1,16 @@
+use std::collections::BTreeMap;
 use std::collections::HashMap;
 
 #[derive(Debug)]
 struct City {
     name: String,
     population: HashMap<i32, i32>,
+}
+
+#[derive(Debug)]
+struct CityB {
+    name: String,
+    population: BTreeMap<i32, i32>,
 }
 
 fn main() {
@@ -19,4 +26,9 @@ fn main() {
     for (year, population) in tallinn.population {
         println!("In {year}, Tallinn had a population of {population}");
     }
+
+    let mut tallinb = CityB {
+        name: "Tallinn".to_string(),
+        population: BTreeMap::new(),
+    };
 }
