@@ -57,4 +57,21 @@ fn main() {
     book_hashmap.insert(1, "Eye of the World");
 
     println!("{:?}", book_hashmap.get(&1));
+
+    let mut old_hashmap_values = Vec::new();
+    let hashmap_entries = [
+        (1, "L'Allemagne Moderne"),
+        (1, "Le Petit Prince"),
+        (1, "섀도우 오브 유어 스마일"),
+        (1, "Eye of the World"),
+    ];
+
+    for (key, value) in hashmap_entries {
+        if let Some(old_value) = book_hashmap.insert(key, value) {
+            println!("Overwriting {old_value} with {value}!");
+            old_hashmap_values.push(old_value);
+        }
+    }
+
+    println!("All old values: {old_hashmap_values:?}");
 }
