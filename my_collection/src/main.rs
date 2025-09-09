@@ -74,4 +74,21 @@ fn main() {
     }
 
     println!("All old values: {old_hashmap_values:?}");
+
+    let book_collection = vec![
+        "L'Allemagne Moderne",
+        "Le Petit Prince",
+        "Eye of the World",
+        "Eye of the World",
+    ];
+
+    let mut newbook_hashmap = HashMap::new();
+
+    for book in book_collection {
+        newbook_hashmap.entry(book).or_insert(true);
+    }
+
+    for (book, true_or_false) in newbook_hashmap {
+        println!("Do we have {book}? {true_or_false}");
+    }
 }
