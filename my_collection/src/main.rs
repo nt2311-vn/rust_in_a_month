@@ -27,8 +27,25 @@ fn main() {
         println!("In {year}, Tallinn had a population of {population}");
     }
 
-    let mut tallinb = CityB {
+    let _tallinb = CityB {
         name: "Tallinn".to_string(),
         population: BTreeMap::new(),
     };
+
+    let canadian_cities = vec!["Calgary", "Vancouver", "Gimli"];
+    let german_cities = vec!["Karlsruhe", "Bad Doberan", "Bielefeld"];
+
+    let mut city_hashmap = HashMap::new();
+
+    for city in canadian_cities {
+        city_hashmap.insert(city, "Canada");
+    }
+
+    for city in german_cities {
+        city_hashmap.insert(city, "German");
+    }
+
+    println!("{:?}", city_hashmap["Bielefeld"]);
+    println!("{:?}", city_hashmap.get("Bielefeld"));
+    println!("{:?}", city_hashmap.get("Bielefeldd"));
 }
