@@ -84,11 +84,22 @@ fn main() {
 
     let mut newbook_hashmap = HashMap::new();
 
-    for book in book_collection {
+    for book in &book_collection {
         newbook_hashmap.entry(book).or_insert(true);
     }
 
     for (book, true_or_false) in newbook_hashmap {
         println!("Do we have {book}? {true_or_false}");
+    }
+
+    let mut book_quantity = HashMap::new();
+
+    for book in &book_collection {
+        let return_value = book_quantity.entry(book).or_insert(0);
+        *return_value += 1;
+    }
+
+    for (book, number) in book_quantity {
+        println!("{book}, {number}");
     }
 }
