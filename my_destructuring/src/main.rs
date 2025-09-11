@@ -59,7 +59,9 @@ fn main() {
         height,
         happiness,
     } = papa_doc;
-    println!("They call him {name} but his real name is {real_name}. He is {height} cm tall and is he happy? {happiness}");
+    println!(
+        "They call him {name} but his real name is {real_name}. He is {height} cm tall and is he happy? {happiness}"
+    );
 
     let tallin = City::new("Tallinn", "Reval", 426_538, 1219);
     tallin.print_names();
