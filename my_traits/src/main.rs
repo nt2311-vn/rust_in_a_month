@@ -1,3 +1,5 @@
+use std::fmt;
+
 struct Dog {
     name: String,
 }
@@ -10,7 +12,6 @@ struct Animal {
     name: String,
 }
 
-#[derive(Debug)]
 struct Cat {
     name: String,
     age: u8,
@@ -50,6 +51,16 @@ impl DogLike for Animal {
     }
 }
 
+impl fmt::Display for Cat {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{} is a cat who is {} years old", self.name, self.age)
+    }
+}
+
+fn print_excitedly(input: String) {
+    println!("{input}!!!!!");
+}
+
 fn main() {
     let rover = Dog {
         name: "Rover".to_string(),
@@ -75,5 +86,9 @@ fn main() {
         age: 3,
     };
 
-    println!("Mr. Bụp is a {mr_bup:#?}");
+    print_excitedly(mr_bup.to_string());
+    println!(
+        "Mr.Bụp's String is {} letters long.",
+        mr_bup.to_string().chars().count()
+    );
 }
