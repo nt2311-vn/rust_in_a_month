@@ -10,6 +10,12 @@ struct Animal {
     name: String,
 }
 
+#[derive(Debug)]
+struct Cat {
+    name: String,
+    age: u8,
+}
+
 trait DogLike {
     fn bark(&self) {}
 
@@ -63,4 +69,11 @@ fn main() {
     brian.run();
     ibrahim.run();
     ibrahim.bark();
+
+    let mr_bup = Cat {
+        name: "Bụp".to_string(),
+        age: 3,
+    };
+
+    println!("Mr. Bụp is a {mr_bup:#?}");
 }
