@@ -11,4 +11,7 @@ fn main() {
     }
 
     println!("{new_vec:?}");
+
+    let functional_vec = (1..).take(9).collect::<Vec<i32>>();
+    println!("{functional_vec:?}");
 }
