@@ -9,4 +9,7 @@ fn main() {
             println!("It's odd")
         };
     });
+
+    let nothing: Option<i32> = None;
+    println!("{}", nothing.unwrap_or(0));
 }
