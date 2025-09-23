@@ -1,4 +1,5 @@
 fn main() {
-    let my_closure = || println!("This is a closure");
-    my_closure();
+    let my_closure = |x: i32| println!("{x}");
+    my_closure(5);
+    my_closure(5 + 5);
 }
