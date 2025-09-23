@@ -24,4 +24,11 @@ fn main() {
     });
 
     println!("{fourth}");
+
+    let char_vec = vec!['z', 'y', 'x'];
+
+    char_vec
+        .iter()
+        .enumerate()
+        .for_each(|(index, c)| println!("Index {index} is: {c}"));
 }
