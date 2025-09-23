@@ -11,4 +11,8 @@ fn main() {
     };
 
     other_closure();
+    let number_one = 6;
+    let number_two = 10;
+    let taken_external_closure = |x: i32| println!("{}", number_one + number_two + x);
+    taken_external_closure(5);
 }
