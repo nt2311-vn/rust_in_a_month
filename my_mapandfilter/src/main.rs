@@ -67,4 +67,13 @@ fn main() {
         .collect::<Vec<f32>>();
 
     println!("{:?}", successful_numbers);
+
+    let results: Vec<Result<String, &str>> = company_vec
+        .iter()
+        .map(|company| company.get_ceo().ok_or("No CEO found"))
+        .collect();
+
+    for item in results {
+        println!("{:?}", item);
+    }
 }
