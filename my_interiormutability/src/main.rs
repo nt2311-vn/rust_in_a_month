@@ -1,5 +1,6 @@
 use std::cell::Cell;
 
+#[derive(Debug)]
 struct PhoneModel {
     company_name: String,
     model_name: String,
@@ -24,4 +25,7 @@ fn main() {
         date_issued: 2020,
         on_sale: Cell::new(true),
     };
+
+    super_phone_3000.make_not_on_sale();
+    println!("{super_phone_3000:#?}");
 }
