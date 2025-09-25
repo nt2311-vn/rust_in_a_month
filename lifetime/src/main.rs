@@ -1,6 +1,6 @@
 #[derive(Debug)]
-struct City {
-    name: &'static str,
+struct City<'a> {
+    name: &'a str,
     date_founded: u32,
 }
 
