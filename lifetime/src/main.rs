@@ -4,6 +4,24 @@ struct City<'a> {
     date_founded: u32,
 }
 
+struct Adventure<'a> {
+    name: &'a str,
+    hit_point: u32,
+}
+
+impl Adventure<'_> {
+    fn take_damage(&mut self) {
+        self.hit_point -= 20;
+        println!("{} has {} hit points left!", self.name, self.hit_point);
+    }
+}
+
+impl std::fmt::Display for Adventure<'_> {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{} has {} hit points.", self.name, self.hit_point)
+    }
+}
+
 fn works() -> &'static str {
     "I live forever!"
 }
@@ -24,4 +42,12 @@ fn main() {
     };
 
     println!("{} was founded in {}", my_city.name, my_city.date_founded);
+
+    let mut billy = Adventure {
+        name: "Billy",
+        hit_point: 100_000,
+    };
+
+    println!("{}", billy);
+    billy.take_damage();
 }
