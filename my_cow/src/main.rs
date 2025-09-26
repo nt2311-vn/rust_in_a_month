@@ -1,3 +1,6 @@
-fn main() {
-    println!("Hello, world!");
+enum Cow {
+    Borrowed,
+    Owned,
 }
+
+fn main() {}
