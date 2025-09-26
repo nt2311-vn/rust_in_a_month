@@ -7,5 +7,11 @@ fn main() {
     let read2 = my_rwlock.read().unwrap();
 
     println!("{read1:?}, {read2:?}");
-    let write1 = my_rwlock.write().unwrap();
+    drop(read1);
+    drop(read2);
+
+    let mut write1 = my_rwlock.write().unwrap();
+    *write1 = 6;
+    drop(write1);
+    println!("{:?}", my_rwlock);
 }
