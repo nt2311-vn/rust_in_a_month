@@ -16,4 +16,6 @@ fn main() {
     //     println!("Didn't get the lock")
     // }
     *my_mutex.lock().unwrap() = 6;
+
+    println!("{my_mutex:?}");
 }
