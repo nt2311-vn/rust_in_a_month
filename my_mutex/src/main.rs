@@ -15,7 +15,13 @@ fn main() {
     // } else {
     //     println!("Didn't get the lock")
     // }
-    *my_mutex.lock().unwrap() = 6;
+    // *my_mutex.lock().unwrap() = 6;
+    //
+    // println!("{my_mutex:?}");
+
+    for _ in 0..100 {
+        *my_mutex.lock().unwrap() += 1;
+    }
 
     println!("{my_mutex:?}");
 }
