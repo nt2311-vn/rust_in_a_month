@@ -4,8 +4,10 @@ fn main() {
     let my_mutex = Mutex::new(5);
 
     let mut mutex_changer = my_mutex.lock().unwrap();
-    *mutex_changer = 6;
-    drop(mutex_changer);
-
-    println!("{my_mutex:?}");
+    // *mutex_changer = 6;
+    // drop(mutex_changer);
+    //
+    // println!("{my_mutex:?}");
+    let mut other_mutex_changer = my_mutex.lock().unwrap();
+    println!("This will never print");
 }
